@@ -24,3 +24,4 @@ jobs:
         uses: hashicorp/two-stage-pr-approval@chore/refactor-to-make-reusable-action
         with:
           token: ${{ steps.app-token.outputs.token }}
+          debug: true
