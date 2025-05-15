@@ -22,9 +22,13 @@ jobs:
           token: ${{ github.token }}
       
       - name: Add label to PR
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
         run: |
           gh pr edit ${{ github.event.pull_request.number }} --add-label "two-stage-review"
       
       - name: make it ready for review
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
         run: |
           gh pr ready ${{ github.event.pull_request.number }}
