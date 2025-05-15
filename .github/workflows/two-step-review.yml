@@ -18,5 +18,3 @@ jobs:
       
       - name: two-stage-pr-review
         uses: hashicorp/two-stage-pr-approval@chore/refactor-to-make-reusable-action
-        with:
-          token: ${{ github.token }}
